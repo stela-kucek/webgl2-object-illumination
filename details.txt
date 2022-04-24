@@ -1,0 +1,34 @@
+This file contains a few remarks specific to the program for Lab1b.
+
+WebGL version: webgl2
+Libraries used: glmatrix
+
+For modularity, the program is composed of 10 javascript files according to functionality:
+	- lab_1b_main.js (main file)
+	- object.js
+		- cube.js
+		- rectangle.js
+		- sphere.js
+	- transformations.js
+	- global.js
+	- shader_handler.js
+	- keystrokes_handler.js
+
+Supported by: Mozilla Firefox, Google Chrome
+
+Not supported by: Internet Explorer, Microsoft Edge
+
+About the application:
+	- the local coordinate system of the object by convention specified with the 3 axes:
+	    - x: red
+	    - y: green
+	    - z: blue
+	    and it reflects the local transformations (i.e. transformations of selected object) of the model matrix
+	- when all shapes are selected, all transformations are applied globally, i.e. movements, rotations and scaling are aligned to conventional world axes
+	- all requirements of lab1b are fulfilled
+	- all relevant controls are displayed next to the canvas for quick reference
+    - Updates in Lab1b:
+	* camera removed
+        * objects are now in a single color, because the illumination makes the transformations (aesthetically better) clearly visible
+        * the local coordinate systems are not illuminated (i.e. don't turn black when the object is oriented away from the light source)
+            so that one can always differentiate between the axes
